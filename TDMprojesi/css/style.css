@@ -1,0 +1,131 @@
+/* reset browser value  */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-size: 120%;
+    background: #223243;
+    /* display: flex; */
+}
+
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #223243;
+    text-align: center;
+    border: 1px solid white;
+    border-bottom: none;
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px;
+    border: 8px solid #223243;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0,0,0,0.35), inset -5px -5px 15px rgba(255,255,255,0.1), inset 5px 5px 15px rgba(0,0,0,0.35);
+}
+
+form, .content{
+    width: 30%;
+    color: white;
+    margin:0 auto;
+    padding: 20px;
+    border: 1px solid white;
+    background: #223243;
+    border-radius: 10px 10px 10px 10px;
+    border: 8px solid #223243;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0,0,0,0.35), inset -5px -5px 15px rgba(255,255,255,0.1), inset 5px 5px 15px rgba(0,0,0,0.35);
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+   
+}
+
+.input-group label{
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+
+.input-group input{
+   height: 30px;
+   width: 93%;
+   padding: 5px 10px;
+   font-size: 15px;
+   border-radius: 5px;
+   border: 1px solid gray;
+}
+
+.btn{
+    font-size: 15px;
+    color: rgb(109, 77, 77);
+    padding: 10px;
+    background: wheat;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+
+    display: inline-block;
+    padding:5px 15px;
+    font-size: 10px;
+    background: #436aaf;
+    color:#fff;
+    margin:0 3px;
+    text-transform: capitalize;
+}
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+   border: 1px solid red;
+   color: brown;
+   background: rgb(53, 45, 29);
+   border-radius: 5px;
+   text-align: left;
+
+}
+
+.success {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+   border: 1px solid red;
+   color: greenyellow;
+   background: wheat;
+   border-radius: 5px;
+   text-align: left;
+   margin-bottom: 20px;
+
+}
+
+.container .content .btn{
+    display: inline-block;
+    padding:10px 30px;
+    font-size: 20px;
+    background: #27406b;
+    color:#fff;
+    margin:0 5px;
+    text-transform: capitalize;
+ }
+ 
+ .container .content .btn:hover{
+    background: rgba(91, 149, 255, 0.833);
+ }
+
+ 
+ .container .content {
+    text-align: center;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+div {
+    display: block;
+}
