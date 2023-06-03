@@ -1,3 +1,4 @@
+
 /* reset browser value  */
 * {
     margin: 0;
@@ -85,13 +86,13 @@ form, .content{
 
 }
 
-.success {
+.success h3 {
     width: 92%;
     margin: 0px auto;
     padding: 10px;
-   border: 1px solid red;
-   color: greenyellow;
-   background: wheat;
+   border: 1px solid #3c763d;
+   color: #3c763d;
+   background: #dff98d;
    border-radius: 5px;
    text-align: left;
    margin-bottom: 20px;
@@ -118,7 +119,7 @@ form, .content{
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

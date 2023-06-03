@@ -11,7 +11,6 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['username']);
     header('location: login.php');
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,41 +27,43 @@ if (isset($_GET['logout'])) {
       position: absolute;
       top: 10px;
       left: 10px;
-      background-color: #4CAF50;
+      background-color: #223243;
       color: white;
       padding: 10px 20px;
       border: none;
       cursor: pointer;
       font-size: 16px;
+      border-radius: 40%;
     }
 
     .go-back-btn:hover {
-      background-color: #45a049;
+      background-color: #243243;
     }
-    
+
     .avatar {
       position: absolute;
       top: 10px;
       right: 60px;
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 26px;
+      color: #fff;
     }
-    
+/* 
     .avatar img {
-      width: 30px;
-      height: 30px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       margin-right: 5px;
-    }
-    
+    } */
+
     /* Rest of your existing CSS styles */
   </style>
   <script>
     function goBack() {
       window.history.back();
     }
-    
+
     document.addEventListener('DOMContentLoaded', (event) => {
       const audioSources = [
         'https://www.fesliyanstudios.com/play-mp3/5248',
@@ -84,13 +85,13 @@ if (isset($_GET['logout'])) {
 </head>
 <body>
   <div class="container">
-    <div class="avatar">
-      <img src="https://example.com/random-logo.png" alt="User Avatar">
-      <?php if (isset($_SESSION['username'])) : ?>
-        <h3>Welcome <strong><?php echo $_SESSION['username']; ?></strong></h3>
-      <?php endif ?>
-    </div>
-    
+    <?php if (isset($_SESSION['username'])) : ?>
+      <div class="avatar">
+        <!-- <img src="<?php echo $randomLogoUrl; ?>" alt="User Avatar"> -->
+        <h3 style="color: #fff;">Player : <strong><?php echo $_SESSION['username']; ?></strong></h3>
+      </div>
+    <?php endif ?>
+
     <div class="card">
       <div class="lines"></div>
       <div class="imgBx">
@@ -132,8 +133,11 @@ if (isset($_GET['logout'])) {
         </div>
       </div>
     </div>
+ิ<br>
+<br>
+   
+      <button class="go-back-btn" onclick="goBack()"> <strong>Back</strong></button>
     
-    <button class="go-back-btn" onclick="goBack()">Go Back</button>
   </div>
 </body>
 </html>
