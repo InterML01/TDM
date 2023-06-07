@@ -128,8 +128,8 @@ if (isset($_GET['logout'])) {
       <div class="content">
         <div class="details">
           <h2>GAME 3</h2>
-          <p>INFORMATION ABOUT GAME 3</p>
-          <a href="oyunlar/math_runner_webGL/index.html">PLAY</a>
+          <p>Math Runner</p>
+          <a href="oyunlar/math_runner02/index.html">PLAY</a>
         </div>
       </div>
     </div>
