@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mathestry</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/styleH.css">
+
+   <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+         var audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+         audio.volume = 0.5; // Adjust the volume (0.0 to 1.0)
+         // audio.play();
+         const buttons = document.querySelectorAll("a");
+         buttons.forEach(button => {
+            button.addEventListener("mouseenter", () => {
+               audio.currentTime = 0; // Reset the audio to start from the beginning
+               audio.play();
+            });
+         });
+      });
+   </script>
+
+</head>
+<body>
+   <div class="container">
+      <div class="content">
+         <h1>Welcome to Mathestry!  <span></span></h1>
+         <a href="http://localhost/TDMprojesi/register.php" class="btn">Register</a>
+         <a href="http://localhost/TDMprojesi/login.php" class="btn">Login</a>
+         <a href=""><button>Click me!</button></a>  
+      </div>
+   </div>
+</body>
+</html>
