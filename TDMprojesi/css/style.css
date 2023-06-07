@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-    width: 30%;
+    width: 50%;
     margin: 50px auto 0px;
     color: white;
     background: #223243;
@@ -27,7 +27,7 @@ body {
 }
 
 form, .content{
-    width: 30%;
+    width: 50%;
     color: white;
     margin:0 auto;
     padding: 20px;
@@ -50,35 +50,53 @@ form, .content{
 }
 
 .input-group input{
+   background: #78b6f8;
    height: 30px;
    width: 93%;
-   padding: 5px 10px;
+   padding: 15px 25px;
    font-size: 15px;
    border-radius: 5px;
-   border: 1px solid gray;
+   border: 1px solid rgb(46, 37, 145);
+   
 }
 
 .btn{
-    font-size: 15px;
-    color: rgb(109, 77, 77);
-    padding: 10px;
-    background: wheat;
+    background: linear-gradient(351.09deg, #F029A0 4.36%, #F0B000 117.5%);
+    transition: all 0.5s;
+    /* font-size: 20px; */
+    /* color: rgb(109, 77, 77); */
+    padding:5px 15px;
+    /* background: wheat; */
     border-radius: 10px 10px 10px 10px;
     border: none;
-
+    width: 90%;
     display: inline-block;
-    padding:5px 15px;
-    font-size: 10px;
-    background: #436aaf;
-    color:#fff;
+    /* padding:5px 15px; */
+    font-size: 15px;
+    /* background: #e9c0a7; */
+    color: white;
     margin:0 3px;
-    text-transform: capitalize;
+    text-transform: uppercase;
+}
+
+.btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(351.09deg, #F0B000 4.36%, #F029A0 117.5%);
+    z-index: -1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .error {
     width: 92%;
     margin: 0px auto;
     padding: 10px;
-   border: 1px solid red;
+   border: 1px solid rgb(235, 201, 201);
    color: brown;
    background: rgb(53, 45, 29);
    border-radius: 5px;

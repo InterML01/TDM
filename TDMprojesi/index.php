@@ -62,7 +62,7 @@ if (isset($_GET['logout'])) {
 
 <body>
     <div class="header">
-        <h2>Home Page</h2>
+        <h2>Home</h2>
     </div>
     <div class="container">
         <div class="content">
@@ -83,6 +83,7 @@ if (isset($_GET['logout'])) {
                     <h3>Welcome <strong><?php echo $_SESSION['username']; ?></strong><span></span></h3>
                     <br>
                     <a href="index.php?logout='1" style="color: red" class="btn logout">Logout</a>
+                    <br> <br>
                     <a href="game.php" class="btn game-pages">Game Pages</a>
                 </div>
             <?php endif ?>

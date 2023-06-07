@@ -101,7 +101,7 @@ if (isset($_GET['logout'])) {
         <div class="details">
           <h2>GAME 1</h2>
           <p>Halat Oyunu</p>
-          <a href="halat_oyun2/index.html">PLAY</a>
+          <a href="oyunlar/halat_oyun2/index.html">PLAY</a>
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@ if (isset($_GET['logout'])) {
         <div class="details">
           <h2>GAME 3</h2>
           <p>INFORMATION ABOUT GAME 3</p>
-          <a href="halat_oyun2/index.html">PLAY</a>
+          <a href="oyunlar/math_runner_webGL/index.html">PLAY</a>
         </div>
       </div>
     </div>

@@ -58,19 +58,19 @@ session_start();
         <!-- -------------------- -->
         <div class="input-group">
             <label for="username">Username</label>
-            <input type="text" name="username" value="<?php echo isset($username) ? htmlspecialchars($username, ENT_QUOTES) : ''; ?>">
+            <input placeholder="Enter your Username" type="text" name="username" value="<?php echo isset($username) ? htmlspecialchars($username, ENT_QUOTES) : ''; ?>">
         </div>
         <div class="input-group">
             <label for="email">Email</label>
-            <input type="email" name="email">
+            <input placeholder="Enter your Email" type="email" name="email">
         </div>
         <div class="input-group">
             <label for="password_1">Password</label>
-            <input type="password" name="password_1">
+            <input placeholder="Enter your Password" type="password" name="password_1">
         </div>
         <div class="input-group">
             <label for="password_2">Confirm Password</label>
-            <input type="password" name="password_2">
+            <input  placeholder="Enter your Password" type="password" name="password_2">
         </div>
         <div class="input-group">
             <button type="submit" name="reg_user" class="btn">Register</button>

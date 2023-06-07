@@ -68,7 +68,7 @@ session_start();
             <!-- -------------------- -->
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" name="username">
+                <input placeholder="Enter your Username" type="text" name="username">
             </div>
             <!-- <div class="input-group">
             <label for="email">Email</label>
@@ -76,11 +76,12 @@ session_start();
         </div> -->
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password">
+                <input placeholder="Enter your Password" type="password" name="password">
             </div>
 
             <div class="input-group">
-                <button type="submit" name="login_user" class="btn">Login</button>
+                <button type="submit" name="login_user" class="btn">Login
+                </button>
             </div>
             <p>Not yet a member? <a href="register.php">Sign up</a></p>
         </form>
