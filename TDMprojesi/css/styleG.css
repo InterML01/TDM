@@ -28,14 +28,16 @@
 .card
 {
   position: relative;
-  width: 350px;
-  height: 180px;
+  /* width: 350px;
+  height: 180px; */
+  width: 250px;
+  height: 120px;
   background: #333;
   transition: 0.5s;
 }
 .card:hover
 {
-  height: 450px;
+  height: 300px;
 }
 .card .lines
 {
@@ -83,8 +85,8 @@
   position: absolute;
   top: -60px;
   left: 50%;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   transform: translateX(-50%);
   background: #000;
   transition: 0.5s;
@@ -97,8 +99,8 @@
 .card:hover .imgBx
 {
   top: 25px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 .card .imgBx::before
 {
@@ -160,7 +162,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .card .content .details

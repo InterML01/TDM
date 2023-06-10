@@ -50,7 +50,8 @@ form, .content{
 }
 
 .input-group input{
-   background: #78b6f8;
+   background: #4d86c3;
+   /* background: #1c3d61; */
    height: 30px;
    width: 93%;
    padding: 15px 25px;
@@ -61,11 +62,12 @@ form, .content{
 }
 
 .btn{
-    background: linear-gradient(351.09deg, #F029A0 4.36%, #F0B000 117.5%);
+    /* background: linear-gradient(351.09deg, #F029A0 4.36%, #F0B000 117.5%); */
+    background: linear-gradient(351.09deg, #a6c2ee 4.36%, #0452ab 117.5%);
     transition: all 0.5s;
     /* font-size: 20px; */
     /* color: rgb(109, 77, 77); */
-    padding:5px 15px;
+    padding:10px 20px;
     /* background: wheat; */
     border-radius: 10px 10px 10px 10px;
     border: none;
@@ -86,7 +88,8 @@ form, .content{
     position: absolute;
     top: 0;
     left: -100%;
-    background: linear-gradient(351.09deg, #F0B000 4.36%, #F029A0 117.5%);
+    /* background: linear-gradient(351.09deg, #F0B000 4.36%, #F029A0 117.5%); */
+    background: linear-gradient(351.09deg, #a6c2ee 4.36%, #29c2f0 117.5%);
     z-index: -1;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -128,7 +131,8 @@ form, .content{
  }
  
  .container .content .btn:hover{
-    background: rgba(91, 149, 255, 0.833);
+    /* background: rgba(119, 152, 214, 0.833); */
+    background: #485a7a;
  }
 
  

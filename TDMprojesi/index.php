@@ -23,21 +23,6 @@ if (isset($_GET['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Game</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .go-back-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #164e8a;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 50%;
-}
-
-    </style>
     <script>
         function goBack() {
             window.history.back();
@@ -79,7 +64,6 @@ if (isset($_GET['logout'])) {
             <?php if (isset($_SESSION['username'])) : ?>
                 <br>
                 <div class="navigation">
-                    <button class="go-back-btn" onclick="goBack()">Back</button>
                     <h3>Welcome <strong><?php echo $_SESSION['username']; ?></strong><span></span></h3>
                     <br>
                     <a href="index.php?logout='1" style="color: red" class="btn logout">Logout</a>
