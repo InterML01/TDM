@@ -1,10 +1,12 @@
 <?php
+include('server.php');
 session_start();
-
+$_SESSION['email'] = $email; 
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
 }
+
 
 if (isset($_GET['logout'])) {
     session_destroy();
@@ -43,21 +45,57 @@ if (isset($_GET['logout'])) {
 
     .avatar {
         position: absolute;
+        top: 40px;
+        right: 60px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #fff;
+        margin: 10px;
+
+    }
+
+    .avatar2 {
+        position: absolute;
+        top: 55px;
+        right: 60px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #fff;
+        margin: 10px;
+
+    }
+
+    .avatar1 {
+        position: absolute;
         top: 10px;
         right: 60px;
         display: flex;
         align-items: center;
-        font-size: 26px;
+        font-size: 20px;
         color: #fff;
+        margin: 10px;
+
     }
 
-    /* 
-    .avatar img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      margin-right: 5px;
-    } */
+    .avatar-image {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+    }
+
+    .avatar-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+
 
     /* Rest of your existing CSS styles */
     </style>
@@ -88,18 +126,59 @@ if (isset($_GET['logout'])) {
 
 <body>
     <button class="go-back-btn" onclick="goBack()"> <strong>Back</strong></button>
+
     <?php if (isset($_SESSION['username'])) : ?>
-    <div class="avatar">
-        <!-- <img src="<?php echo $randomLogoUrl; ?>" alt="User Avatar"> -->
-        <h3 style="color: #fff;">Player : <strong><?php echo $_SESSION['username']; ?></strong></h3>
+
+    <?php
+    // Retrieve email from the database based on the username
+    $username = $_SESSION['username'];
+    $query = "SELECT email,gender FROM user WHERE username = '$username'";
+    $result = mysqli_query($conn, $query);
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $email = $row['email'];
+        $gender = $row['gender'];
+    }
+    ?>
+    <div class="avatar1">
+        <h3 style="color: #fff;">Player: <?php   echo $_SESSION['username']; ?></h3><br>
     </div>
-    <?php endif ?>
+
+    <?php if (isset($gender)) : ?>
+
+
+    <div class="avatar2">
+
+        <?php if ($gender === "male") : ?>
+        <div class="avatar-image">
+            <img src="img/boy.jpeg" alt="Male Image">
+        </div>
+
+        <?php else : ?>
+        <div class="avatar-image">
+            <img src="img/girl.jpeg" alt="Female Image">
+        </div>
+        <?php endif; ?>
+        <!-- <h3 style="color: #fff;">Gender: <?php echo $gender; ?></h3> -->
+    </div>
+
+    <?php endif; ?>
+
+    <?php endif; ?>
+
+    <!-- <?php if (isset($email)) : ?>
+        <div class="avatar">
+            <h3 style="color: #fff;">Email: <?php echo $email; ?></h3>
+        </div>
+        <?php endif; ?> -->
+
 
     <div class="container">
         <div class="card">
             <div class="lines"></div>
             <div class="imgBx">
-                <img src="img/game1.png">
+                <img src="img/rope.png">
+                <!-- <img src="img/ropeC.png"> -->
             </div>
             <div class="content">
                 <div class="details">
@@ -113,12 +192,12 @@ if (isset($_GET['logout'])) {
         <div class="card">
             <div class="lines"></div>
             <div class="imgBx">
-                <img src="img/game2.png">
+                <img src="img/tree.png">
             </div>
             <div class="content">
                 <div class="details">
-                    <h2>GAME 2</h2>
-                    <p>Fidan Oyunu</p>
+                    <h2>Fidan Oyunu</h2>
+                    <!-- <p>Fidan Oyunu</p> -->
                     <a href="#">PLAY</a>
                 </div>
             </div>
@@ -126,34 +205,34 @@ if (isset($_GET['logout'])) {
 
         <!-- <div class="container"> -->
 
-            <div class="card">
-                <div class="lines"></div>
-                <div class="imgBx">
-                    <img src="img/game3.png">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Math Runner</h2>
-                        <!-- <p>Math Runner</p> -->
-                        <a href="oyunlar/math_runner02/index.html">PLAY</a>
-                    </div>
-                </div>
+        <div class="card">
+            <div class="lines"></div>
+            <div class="imgBx">
+                <img src="img/car.png">
             </div>
-
-            <div class="card">
-                <div class="lines"></div>
-                <div class="imgBx">
-                    <img src="img/game3.png">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>GAME 4</h2>
-                        <p>..........</p>
-                        <a href="#">PLAY</a>
-                    </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Math Runner</h2>
+                    <!-- <p>Math Runner</p> -->
+                    <a href="oyunlar/math_runner02/index.html">PLAY</a>
                 </div>
             </div>
         </div>
+
+        <div class="card">
+            <div class="lines"></div>
+            <div class="imgBx">
+                <img src="img/ballon.png">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>GAME 4</h2>
+                    <!-- <p>GAME 4.</p> -->
+                    <a href="oyunlar/math/index.html">PLAY</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
 

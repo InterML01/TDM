@@ -9,7 +9,7 @@
     if(!$conn) { //ถ้าไม่มีการเชือมต่อ
         die("Connect failed".mysqli_connect_error());
     } else {
-        echo "Connect successfuly".mysqli_connect_error();
+        // echo "Connect successfuly".mysqli_connect_error();
     }
 
 

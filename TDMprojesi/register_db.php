@@ -1,22 +1,24 @@
 <?php
-    // dec session for keep session
+    // 1 dec session for keep session
     session_start();
     include('server.php'); 
-    $errors = array(); // crt var
+    $errors = array(); // 2 crt var
 
-    if (isset($_POST['reg_user'])) { // check ว่ามึการเกบ
+    if (isset($_POST['reg_user'])) { //3 check ว่ามึการกด submit then crt val and keep data from form
         $username = mysqli_real_escape_string($conn, trim($_POST['username']));
         $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $gender = mysqli_real_escape_string($conn, $_POST['gender']);
         $password_1 = mysqli_real_escape_string($conn, $_POST['password_1']);
         $password_2 = mysqli_real_escape_string($conn, $_POST['password_2']);
 
-        if (empty(trim($username))) {
+        if (empty($username)) {
             array_push($errors, "Username is required");
-        } elseif (preg_match('/\s/', $username)) {
-            array_push($errors, "Username should not contain spaces");
         }
-        if (empty($email)) {
-            array_push($errors, "email is required");
+        // if (empty($email)) {
+        //     array_push($errors, "email is required");
+        // }
+        if (empty($gender)) {
+            array_push($errors, "gender is required");
         }
         if (empty($password_1)) {
             array_push($errors, "password is required");
@@ -38,7 +40,7 @@
         if(count($errors) == 0) { //if no error => encryp เข้าหรัสก่อน save in db
             $password = md5($password_1);
 
-            $sql = "INSERT INTO user (username, email, password) VALUES ('$username', '$email','$password')";
+            $sql = "INSERT INTO user (username, email,gender, password) VALUES ('$username', '$email','$gender','$password')";
             mysqli_query($conn, $sql);
 
             $_SESSION['username'] = $username; // เกบ data(name) in session

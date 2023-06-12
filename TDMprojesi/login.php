@@ -21,8 +21,16 @@ session_start();
         font-family: Arial, sans-serif;
         /* background: #f8ab47; */
     }
+
     ::placeholder {
-        color: #1c3d61;
+        /* color: #1c3d61; */
+        color: #778492;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        color: #fff;
     }
     </style>
     <script>
@@ -35,11 +43,12 @@ session_start();
             audio.play();
         });
     });
+
     function preventSpace(event) {
-    if (event.keyCode === 32) {
-        event.preventDefault();
+        if (event.keyCode === 32) {
+            event.preventDefault();
+        }
     }
-}
     </script>
 </head>
 
@@ -76,13 +85,13 @@ session_start();
             <!-- -------------------- -->
             <div class="input-group">
                 <label for="username">Username</label>
-                <!-- <input placeholder="Enter your Username" type="text" name="username" pattern="^\S+$" title="Username must not contain spaces"> -->
-                <input placeholder="Enter your Username" type="text" name="username" onkeydown="preventSpace(event)" pattern="^\S+$" title="Username must not contain spaces">
+                <input placeholder="Enter your Username" type="text" name="username" onkeydown="preventSpace(event)"
+                    pattern="^\S+$" title="Username must not contain spaces">
             </div>
-            <!-- <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" name="email">
-        </div> -->
+
+            <!--  -->
+
+            <!--  -->
             <div class="input-group">
                 <label for="password">Password</label>
                 <input placeholder="Enter your Password" type="password" name="password">
