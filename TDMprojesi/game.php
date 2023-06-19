@@ -19,7 +19,7 @@ if (isset($_GET['logout'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>TDM PROJECT</title>
+    <title>TDM Games</title>
     <link rel="stylesheet" type="text/css" href="css/styleG.css">
     <style>
     .container {
@@ -94,8 +94,6 @@ if (isset($_GET['logout'])) {
         max-height: 100%;
         object-fit: cover;
     }
-
-
 
     /* Rest of your existing CSS styles */
     </style>
@@ -182,9 +180,9 @@ if (isset($_GET['logout'])) {
             </div>
             <div class="content">
                 <div class="details">
-                    <h2>Halat Oyunu</h2>
+                    <h2>Mathestry</h2>
                     <!-- <p>Halat Oyunu</p> -->
-                    <a href="oyunlar/halat_oyun2/index.html">PLAY</a>
+                    <a href="oyunlar/Mathestry/index.html">PLAY</a>
                 </div>
             </div>
         </div>
@@ -196,9 +194,9 @@ if (isset($_GET['logout'])) {
             </div>
             <div class="content">
                 <div class="details">
-                    <h2>Fidan Oyunu</h2>
+                    <h2>FiboTree</h2>
                     <!-- <p>Fidan Oyunu</p> -->
-                    <a href="#">PLAY</a>
+                    <a href="oyunlar/Fibotree/index.html">PLAY</a>
                 </div>
             </div>
         </div>
@@ -226,9 +224,9 @@ if (isset($_GET['logout'])) {
             </div>
             <div class="content">
                 <div class="details">
-                    <h2>GAME 4</h2>
+                    <h2>Math Puzzle</h2>
                     <!-- <p>GAME 4.</p> -->
-                    <a href="oyunlar/math/index.html">PLAY</a>
+                    <a href="oyunlar/oyun/index.html">PLAY</a>
                 </div>
             </div>
         </div>

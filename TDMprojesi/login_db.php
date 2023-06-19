@@ -23,12 +23,12 @@
             if (mysqli_num_rows($result) == 1) {
             $_SESSION['username'] = $username; // เกบ data(name) in session
             // $_SESSION['password'] = $password;
-            $_SESSION['success'] = "You are now logged in";
-            header('location: index.php');
+            $_SESSION['success'] = "You are now logged in 2";
+            header('location: index1.php');
             } else {
                 // เกบ session error and redirect to Login page
                 array_push($errors, "wrong username/password combination");
-                $_SESSION['error'] = "wrong username or password combination";
+                $_SESSION['error'] = "wrong username or password combination 2";
             header('location: login.php');
             }
         }     else {
